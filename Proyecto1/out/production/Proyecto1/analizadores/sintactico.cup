@@ -1,0 +1,70 @@
+package analizadores;
+import java_cup.runtime.Symbol;
+import analizadores.*;
+
+parser code
+{:
+
+    // error sintactico
+    public void syntax_error(Symbol s)
+    {
+        String lexema = s.value.toString();
+        int fila = s.right;
+        int columna = s.left;
+
+        System.out.println("!!!!!!! XDDDDD Recuperado !!!!!!!");
+
+
+    }
+
+    //momento en que ya no es posible una recuperacion de errores
+    public void unrecovered_syntax_error(Symbol s) throws java.lang.Exception
+    {
+        String lexema = s.value.toString();
+        int fila = s.right;
+        int columna = s.left;
+
+        System.out.println("!!!!!!! AAAAAAAAAAAAAAAAA, Panic Mode !!!!!!! ");
+
+    }
+:}
+
+terminal String llavea, llavec, dospuntos, puntocoma, flecha, punto, asterisco, coma, or, mas, guionondulado, interrogacion, conj, porcentajes, comentariolineas, cadena, comentario, numero, letra, id, simbolos;
+
+non terminal INICIO,INICIO2,CONJUNTOS,COMBINACIONES,COMASLETRA,COMASNUMERO;
+
+start with INICIO;
+
+INICIO::= llavea INICIO2 llavec {:System.out.println("Fin de analisis de entrada");:}
+;
+
+INICIO2::= CONJUNTOS
+| INICIO2 CONJUNTOS
+;
+
+CONJUNTOS::= conj dospuntos id flecha  COMBINACIONES puntocoma
+;
+
+COMBINACIONES::= letra guionondulado letra
+| numero guionondulado numero
+| simbolos guionondulado simbolos
+| letra COMASLETRA
+| numero COMASNUMERO
+;
+
+COMASLETRA::= coma letra COMASLETRA
+;
+
+COMASNUMERO::= coma numero COMASNUMERO
+| coma numero
+;
+
+
+
+
+
+//java -jar java-cup-11b.jar -parser Sintactico -symbols Simbolos sintactico.cup
+//java -jar jflex-full-1.7.0.jar lexico.jflex
+
+
+
