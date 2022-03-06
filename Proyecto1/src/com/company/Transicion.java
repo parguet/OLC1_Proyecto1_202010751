@@ -18,6 +18,6 @@ public class Transicion {
 
     @Override
     public String toString(){
-        return this.initialState + " -> " + this.transition + " -> " + this.finalState;
+        return this.initialState + " - " + this.transition + " - " + this.finalState;
     }
 }

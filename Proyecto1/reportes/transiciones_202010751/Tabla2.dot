@@ -1,0 +1,66 @@
+digraph G {
+bgcolor="slategrey" label="Tabla de Transicion" layout=dot 
+labelloc = "t" edge [weigth=1000  color=darkgreen  arrowtail="open" arrowhead="open"]
+node[shape=box, style="filled", color=lightgrey];
+a0 [label=<
+<TABLE border="10" cellspacing="10" cellpadding="10" style="rounded"><TR><TD>S0</TD>
+  <TD> </TD>
+  <TD>[1, 2, 3, 4, 5, 6, 7, 8, 10, 14, 15, 17, 18, 19]</TD>
+  <TD>[S0 - {especiales3} - S1, S0 - {conj5} - S2, S0 - c - S3, S0 - {conj6} - S2, S0 - x - S2, S0 - y - S2, S0 - e - S4, S0 - f - S5, S0 - n - S6, S0 - l - S4, S0 - {especiales5} - S7, S0 - {conj8} - S8, S0 - q - S9]</TD>
+  <TD>true</TD>
+  </TR><TR><TD>S1</TD>
+  <TD> </TD>
+  <TD>[1, 5, 6, 7, 19]</TD>
+  <TD>[S1 - {especiales3} - S1, S1 - x - S2, S1 - y - S2, S1 - e - S4]</TD>
+  <TD>true</TD>
+  </TR><TR><TD>S2</TD>
+  <TD> </TD>
+  <TD>[5, 6, 7, 19]</TD>
+  <TD>[S2 - x - S2, S2 - y - S2, S2 - e - S4]</TD>
+  <TD>true</TD>
+  </TR><TR><TD>S3</TD>
+  <TD> </TD>
+  <TD>[3, 5, 6, 7, 19]</TD>
+  <TD>[S3 - c - S3, S3 - x - S2, S3 - y - S2, S3 - e - S4]</TD>
+  <TD>true</TD>
+  </TR><TR><TD>S4</TD>
+  <TD> </TD>
+  <TD>[19]</TD>
+  <TD>[]</TD>
+  <TD>true</TD>
+  </TR><TR><TD>S5</TD>
+  <TD> </TD>
+  <TD>[9, 19]</TD>
+  <TD>[S5 - {especiales4} - S4]</TD>
+  <TD>true</TD>
+  </TR><TR><TD>S6</TD>
+  <TD> </TD>
+  <TD>[11]</TD>
+  <TD>[S6 - i - S10]</TD>
+  <TD>false</TD>
+  </TR><TR><TD>S7</TD>
+  <TD> </TD>
+  <TD>[16, 19]</TD>
+  <TD>[S7 - n - S7]</TD>
+  <TD>true</TD>
+  </TR><TR><TD>S8</TD>
+  <TD> </TD>
+  <TD>[18]</TD>
+  <TD>[S8 - q - S9]</TD>
+  <TD>false</TD>
+  </TR><TR><TD>S9</TD>
+  <TD> </TD>
+  <TD>[18, 19]</TD>
+  <TD>[S9 - q - S9]</TD>
+  <TD>true</TD>
+  </TR><TR><TD>S10</TD>
+  <TD> </TD>
+  <TD>[12]</TD>
+  <TD>[S10 - j - S11]</TD>
+  <TD>false</TD>
+  </TR><TR><TD>S11</TD>
+  <TD> </TD>
+  <TD>[13, 19]</TD>
+  <TD>[S11 - {conj7} - S4]</TD>
+  <TD>true</TD>
+  </TR></TABLE>>];}

@@ -104,13 +104,15 @@ public class transitionTable {
 
     public String graphviz(){
         StringBuilder dot = new StringBuilder();
+        StringBuilder dot2 = new StringBuilder();
 
         dot.append("digraph G {\n");
-        dot.append("bgcolor=\"slategrey\" label=\"Tabla de Siguientes\"layout=dot \n" +
-                "labelloc = \"t\"edge [weigth=1000  color=darkgreen  arrowtail=\"open\" arrowhead=\"open\"]\n");
+        dot.append("bgcolor=\"slategrey\" label=\"Tabla de Transicion\" layout=dot \n" +
+                "labelloc = \"t\" edge [weigth=1000  color=darkgreen  arrowtail=\"open\" arrowhead=\"open\"]\n");
         dot.append("node[shape=box, style=\"filled\", color=lightgrey];\n");
         dot.append("a0 [label=<\n" +
-                "<TABLE>");
+                "<TABLE border=\"10\" cellspacing=\"10\" cellpadding=\"10\" style=\"rounded\">");
+
 
         for(ArrayList state : states){
             String tran = "[";
@@ -122,13 +124,14 @@ public class transitionTable {
 
             tran = tran.replace(", ]", "]");
 
-            dot.append("<TR><TD>"+state.get(0)+"</TD>\n" +
+            dot2.append("<TR><TD>"+state.get(0)+"</TD>\n" +
                     "  <TD> </TD>\n" +
                     "  <TD>"+state.get(1)+"</TD>\n" +
                     "  <TD>"+tran+"</TD>\n" +
                     "  <TD>"+state.get(3)+"</TD>\n" +
                     "  </TR>");
         }
+        dot.append(dot2.toString().replace("\"",""));
         dot.append("</TABLE>>];");
         dot.append("}");
         return dot.toString();

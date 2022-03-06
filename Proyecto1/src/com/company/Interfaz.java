@@ -82,7 +82,7 @@ public class Interfaz extends JFrame implements ActionListener {
             InterfazArchivo interfazArchivo = new InterfazArchivo();
             interfazArchivo.setVisible(true);
 
-            String d = "\""+"\\"+"'"+"\"";
+            String d = "\""+"\\"+"\"";
         }
         if (e.getSource()==generarEntradas){
             Main.analizar();

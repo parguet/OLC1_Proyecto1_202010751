@@ -109,6 +109,7 @@ public class Nodo {
                     followTable tabla = new followTable();
                     tabla.append(nodo.number, nodo.lexeme, ((Nodo) rightFollow).first, table);
                 }
+
                 break;
             case MAS:
             case KLEENE:

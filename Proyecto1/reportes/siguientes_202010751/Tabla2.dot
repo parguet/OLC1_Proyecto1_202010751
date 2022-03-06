@@ -3,22 +3,97 @@ bgcolor="slategrey" label="Tabla de Siguientes"layout=dot
 labelloc = "t"edge [weigth=1000  color=darkgreen  arrowtail="open" arrowhead="open"]
 node[shape=box, style="filled", color=lightgrey];
 a0 [label=<
-<TABLE><TR><TD>3</TD>
+<TABLE><TR><TD>1</TD>
   <TD>-</TD>
-  <TD>{grupo1}</TD>
+  <TD>{especiales3}</TD>
   <TD>-</TD>
-  <TD>[3, 4]</TD>
+  <TD>[1, 5, 6, 7, 19]</TD>
+  </TR><TR><TD>3</TD>
+  <TD>-</TD>
+  <TD>"c"</TD>
+  <TD>-</TD>
+  <TD>[3, 5, 6, 7, 19]</TD>
+  </TR><TR><TD>5</TD>
+  <TD>-</TD>
+  <TD>"x"</TD>
+  <TD>-</TD>
+  <TD>[5, 6, 7, 19]</TD>
+  </TR><TR><TD>6</TD>
+  <TD>-</TD>
+  <TD>"y"</TD>
+  <TD>-</TD>
+  <TD>[5, 6, 7, 19]</TD>
   </TR><TR><TD>2</TD>
   <TD>-</TD>
-  <TD>"a"</TD>
+  <TD>{conj5}</TD>
   <TD>-</TD>
-  <TD>[3]</TD>
-  </TR><TR><TD>1</TD>
-  <TD>-</TD>
-  <TD>"a"</TD>
-  <TD>-</TD>
-  <TD>[2]</TD>
+  <TD>[5, 6, 7, 19]</TD>
   </TR><TR><TD>4</TD>
+  <TD>-</TD>
+  <TD>{conj6}</TD>
+  <TD>-</TD>
+  <TD>[5, 6, 7, 19]</TD>
+  </TR><TR><TD>8</TD>
+  <TD>-</TD>
+  <TD>"f"</TD>
+  <TD>-</TD>
+  <TD>[9, 19]</TD>
+  </TR><TR><TD>12</TD>
+  <TD>-</TD>
+  <TD>"j"</TD>
+  <TD>-</TD>
+  <TD>[13, 19]</TD>
+  </TR><TR><TD>11</TD>
+  <TD>-</TD>
+  <TD>"i"</TD>
+  <TD>-</TD>
+  <TD>[12]</TD>
+  </TR><TR><TD>10</TD>
+  <TD>-</TD>
+  <TD>"n"</TD>
+  <TD>-</TD>
+  <TD>[11]</TD>
+  </TR><TR><TD>16</TD>
+  <TD>-</TD>
+  <TD>"n"</TD>
+  <TD>-</TD>
+  <TD>[16, 19]</TD>
+  </TR><TR><TD>15</TD>
+  <TD>-</TD>
+  <TD>{especiales5}</TD>
+  <TD>-</TD>
+  <TD>[16, 19]</TD>
+  </TR><TR><TD>18</TD>
+  <TD>-</TD>
+  <TD>"q"</TD>
+  <TD>-</TD>
+  <TD>[18, 19]</TD>
+  </TR><TR><TD>17</TD>
+  <TD>-</TD>
+  <TD>{conj8}</TD>
+  <TD>-</TD>
+  <TD>[18]</TD>
+  </TR><TR><TD>7</TD>
+  <TD>-</TD>
+  <TD>"e"</TD>
+  <TD>-</TD>
+  <TD>[19]</TD>
+  </TR><TR><TD>9</TD>
+  <TD>-</TD>
+  <TD>{especiales4}</TD>
+  <TD>-</TD>
+  <TD>[19]</TD>
+  </TR><TR><TD>13</TD>
+  <TD>-</TD>
+  <TD>{conj7}</TD>
+  <TD>-</TD>
+  <TD>[19]</TD>
+  </TR><TR><TD>14</TD>
+  <TD>-</TD>
+  <TD>"l"</TD>
+  <TD>-</TD>
+  <TD>[19]</TD>
+  </TR><TR><TD>19</TD>
   <TD>-</TD>
   <TD>#</TD>
   </TR></TABLE>>];}

@@ -1,0 +1,36 @@
+digraph G {
+bgcolor="slategrey" label="Tabla de Transicion" layout=dot 
+labelloc = "t" edge [weigth=1000  color=darkgreen  arrowtail="open" arrowhead="open"]
+node[shape=box, style="filled", color=lightgrey];
+a0 [label=<
+<TABLE border="10" cellspacing="10" cellpadding="10" style="rounded"><TR><TD>S0</TD>
+  <TD> </TD>
+  <TD>[1, 2, 3, 4, 5, 6, 7, 8, 9]</TD>
+  <TD>[S0 - \' - S1, S0 - {conj1} - S2, S0 - c - S3, S0 - {conj2} - S2, S0 - e - S4, S0 - \ - S2, S0 - {conj4} - S2, S0 - h - S5]</TD>
+  <TD>true</TD>
+  </TR><TR><TD>S1</TD>
+  <TD> </TD>
+  <TD>[1, 9]</TD>
+  <TD>[S1 - \' - S1]</TD>
+  <TD>true</TD>
+  </TR><TR><TD>S2</TD>
+  <TD> </TD>
+  <TD>[9]</TD>
+  <TD>[]</TD>
+  <TD>true</TD>
+  </TR><TR><TD>S3</TD>
+  <TD> </TD>
+  <TD>[3, 9]</TD>
+  <TD>[S3 - c - S3]</TD>
+  <TD>true</TD>
+  </TR><TR><TD>S4</TD>
+  <TD> </TD>
+  <TD>[5, 9]</TD>
+  <TD>[S4 - e - S4]</TD>
+  <TD>true</TD>
+  </TR><TR><TD>S5</TD>
+  <TD> </TD>
+  <TD>[8, 9]</TD>
+  <TD>[S5 - h - S5]</TD>
+  <TD>true</TD>
+  </TR></TABLE>>];}

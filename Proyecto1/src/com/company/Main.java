@@ -9,6 +9,7 @@ public class Main {
     public static ArrayList<Conjunto> conjuntos = new ArrayList<Conjunto>();
     public static ArrayList<Expresion> expresiones = new ArrayList<Expresion>();
     public static ArrayList<Expresion> entradas = new ArrayList<Expresion>();
+    public static ArrayList<String> errores = new ArrayList<String>();
 
     public static void main(String[] args) {
         Expresion expresion = new Expresion("n", "C");
@@ -109,6 +110,11 @@ public class Main {
             System.out.println(expresiones.get(i).getNombre() + " " + expresiones.get(i).getExpresion());
         }
 
+        String html = "";
+        for (int i = 0; i < errores.size(); i++) {
+
+            html+="";
+        }
 
         for (int i = 0; i < expresiones.size(); i++) {
 
@@ -144,7 +150,16 @@ public class Main {
             transitionTable tran = new transitionTable(raiz, table, leaves); // bug
             System.out.println("=============================TABLA TRANSICIONES=============================");
             tran.impTable();
-            //tran.graphviz();
+            graphviz = tran.graphviz();
+            EscribirArchivo(graphviz,"./reportes/transiciones_202010751/Tabla"+(i+1)+".dot");
+            ProcessBuilder proceso2;
+            proceso2 = new ProcessBuilder("dot", "-Tpng", "-o","./reportes/transiciones_202010751/Tabla"+(i+1)+".png","./reportes/transiciones_202010751/Tabla"+(i+1)+".dot");
+            proceso2.redirectErrorStream(true);
+            try {
+                proceso2.start();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
 
 

@@ -61,7 +61,6 @@ public class followTable {
                     "  <TD>-</TD>\n" +
                     "  <TD>"+item.get(2)+"</TD>\n" +
                     "  </TR>");
-            System.out.println(item.get(0) + " - " + item.get(1) + " - " + item.get(2) );
         }
         dot.append("<TR><TD>"+(size+1)+"</TD>\n" +
                 "  <TD>-</TD>\n" +
