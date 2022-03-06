@@ -1,0 +1,29 @@
+digraph G {
+bgcolor="slategrey" label="Tabla de Siguientes"layout=dot 
+labelloc = "t"edge [weigth=1000  color=darkgreen  arrowtail="open" arrowhead="open"]
+node[shape=box, style="filled", color=lightgrey];
+a0 [label=<
+<TABLE><TR><TD>2</TD>
+  <TD>-</TD>
+  <TD>{impar}</TD>
+  <TD>-</TD>
+  <TD>[2, 3, 4]</TD>
+  </TR><TR><TD>3</TD>
+  <TD>-</TD>
+  <TD>{letrac}</TD>
+  <TD>-</TD>
+  <TD>[2, 3, 4]</TD>
+  </TR><TR><TD>1</TD>
+  <TD>-</TD>
+  <TD>"a"</TD>
+  <TD>-</TD>
+  <TD>[2, 3, 4]</TD>
+  </TR><TR><TD>4</TD>
+  <TD>-</TD>
+  <TD>"b"</TD>
+  <TD>-</TD>
+  <TD>[5]</TD>
+  </TR><TR><TD>5</TD>
+  <TD>-</TD>
+  <TD>#</TD>
+  </TR></TABLE>>];}

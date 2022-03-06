@@ -15,6 +15,7 @@ public class Simbolos {
   public static final int porcentajes = 15;
   public static final int flecha = 6;
   public static final int conj = 14;
+  public static final int caracterEspecial = 23;
   public static final int or = 10;
   public static final int guionondulado = 12;
   public static final int punto = 7;
@@ -54,7 +55,8 @@ public class Simbolos {
   "numero",
   "letra",
   "id",
-  "simbolos"
+  "simbolos",
+  "caracterEspecial"
   };
 }
 

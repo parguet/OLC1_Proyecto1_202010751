@@ -21,9 +21,9 @@ cadena = ([\"][^\n\"]+[\"])|([\'][^\n\']+[\'])
 comentario = ("//" [^"\n"]+)
 numero = [0-9]+
 letra = [a-zA-Z]
-id = ([a-zA-Z]+|[0-9]+)+
+id = {letra}+("_"|{numero})*
 simbolos = ("!")|("\"")|("#")|("$")|("%")|("&")|("\'")|("(")|(")")|("*")|("+")|(",")|("-")|(".")|("/")|(":")|(";")|("<")|("=")|(">")|("?")|("@")|("[")|("]")|("^")|("_")|("`")|("{")|("}")
-
+caracterEspecial = ([\"][^\n\"]+[\"][\"])
 %%
 <YYINITIAL>
 {
@@ -48,6 +48,7 @@ simbolos = ("!")|("\"")|("#")|("$")|("%")|("&")|("\'")|("(")|(")")|("*")|("+")|(
 {letra} {System.out.println("se encontro una letra");                       return new Symbol(Simbolos.letra, yycolumn, yyline, yytext());}
 {id}    {System.out.println("se encontro un id");                           return new Symbol(Simbolos.id, yycolumn, yyline, yytext());}
 {simbolos}  {System.out.println("se encontro un simbolo");                  return new Symbol(Simbolos.simbolos, yycolumn, yyline, yytext());}
+{caracterEspecial}  {System.out.println("se encontro un caracterEspecial");                  return new Symbol(Simbolos.caracterEspecial, yycolumn, yyline, yytext());}
 }
 
 [ \t\r\n\f] { /* ignorar */ }

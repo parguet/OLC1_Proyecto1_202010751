@@ -7,6 +7,7 @@ package analizadores;
 
 import java_cup.runtime.Symbol;
 import analizadores.*;
+import com.company.*;
 import java_cup.runtime.XMLElement;
 
 /** CUP v0.11b 20160615 (GIT 4ac7450) generated parser.
@@ -32,11 +33,19 @@ public class Sintactico extends java_cup.runtime.lr_parser {
   /** Production table. */
   protected static final short _production_table[][] = 
     unpackFromStrings(new String[] {
-    "\000\016\000\002\002\004\000\002\002\005\000\002\003" +
-    "\003\000\002\003\004\000\002\004\010\000\002\005\005" +
-    "\000\002\005\005\000\002\005\005\000\002\005\004\000" +
-    "\002\005\004\000\002\006\004\000\002\006\005\000\002" +
-    "\007\004\000\002\007\005" });
+    "\000\047\000\002\002\004\000\002\002\005\000\002\003" +
+    "\003\000\002\003\004\000\002\003\004\000\002\003\003" +
+    "\000\002\003\004\000\002\003\003\000\002\003\004\000" +
+    "\002\003\003\000\002\004\010\000\002\005\005\000\002" +
+    "\005\005\000\002\005\005\000\002\005\004\000\002\005" +
+    "\004\000\002\006\005\000\002\006\004\000\002\007\005" +
+    "\000\002\007\004\000\002\010\006\000\002\011\004\000" +
+    "\002\011\003\000\002\011\004\000\002\011\003\000\002" +
+    "\011\004\000\002\011\003\000\002\011\004\000\002\011" +
+    "\003\000\002\011\004\000\002\011\003\000\002\011\004" +
+    "\000\002\011\003\000\002\011\004\000\002\011\003\000" +
+    "\002\011\004\000\002\011\003\000\002\012\003\000\002" +
+    "\013\006" });
 
   /** Access to production table. */
   public short[][] production_table() {return _production_table;}
@@ -44,23 +53,53 @@ public class Sintactico extends java_cup.runtime.lr_parser {
   /** Parse-action table. */
   protected static final short[][] _action_table = 
     unpackFromStrings(new String[] {
-    "\000\037\000\004\004\004\001\002\000\004\020\011\001" +
-    "\002\000\004\002\006\001\002\000\004\002\001\001\002" +
-    "\000\006\005\040\020\011\001\002\000\006\005\uffff\020" +
-    "\uffff\001\002\000\004\006\012\001\002\000\004\027\013" +
-    "\001\002\000\004\010\014\001\002\000\010\025\017\026" +
-    "\016\030\020\001\002\000\004\007\037\001\002\000\006" +
-    "\013\031\016\033\001\002\000\006\013\024\016\025\001" +
-    "\002\000\004\016\021\001\002\000\004\030\022\001\002" +
-    "\000\004\007\ufffa\001\002\000\004\007\ufff8\001\002\000" +
-    "\004\025\027\001\002\000\004\025\026\001\002\000\004" +
-    "\007\ufffb\001\002\000\006\007\ufff5\013\024\001\002\000" +
-    "\004\007\ufff4\001\002\000\004\026\035\001\002\000\004" +
-    "\007\ufff9\001\002\000\004\026\034\001\002\000\004\007" +
-    "\ufffc\001\002\000\006\007\ufff7\013\031\001\002\000\004" +
-    "\007\ufff6\001\002\000\006\005\ufffd\020\ufffd\001\002\000" +
-    "\004\002\000\001\002\000\006\005\ufffe\020\ufffe\001\002" +
-    "" });
+    "\000\075\000\004\004\004\001\002\000\010\020\015\021" +
+    "\014\027\016\001\002\000\004\002\006\001\002\000\004" +
+    "\002\001\001\002\000\012\005\ufffa\020\ufffa\021\ufffa\027" +
+    "\ufffa\001\002\000\012\005\073\020\015\021\014\027\016" +
+    "\001\002\000\012\005\ufff8\020\ufff8\021\ufff8\027\ufff8\001" +
+    "\002\000\012\005\uffff\020\uffff\021\uffff\027\uffff\001\002" +
+    "\000\012\005\ufffc\020\ufffc\021\ufffc\027\ufffc\001\002\000" +
+    "\012\005\uffdc\020\uffdc\021\uffdc\027\uffdc\001\002\000\004" +
+    "\006\045\001\002\000\006\006\020\010\017\001\002\000" +
+    "\022\004\031\005\030\011\026\012\032\014\025\015\033" +
+    "\023\024\027\023\001\002\000\004\023\021\001\002\000" +
+    "\004\007\022\001\002\000\012\005\uffdb\020\uffdb\021\uffdb" +
+    "\027\uffdb\001\002\000\024\004\031\005\030\007\uffe5\011" +
+    "\026\012\032\014\025\015\033\023\024\027\023\001\002" +
+    "\000\024\004\031\005\030\007\uffdf\011\026\012\032\014" +
+    "\025\015\033\023\024\027\023\001\002\000\024\004\031" +
+    "\005\030\007\uffe1\011\026\012\032\014\025\015\033\023" +
+    "\024\027\023\001\002\000\024\004\031\005\030\007\uffeb" +
+    "\011\026\012\032\014\025\015\033\023\024\027\023\001" +
+    "\002\000\004\007\040\001\002\000\024\004\031\005\030" +
+    "\007\uffe7\011\026\012\032\014\025\015\033\023\024\027" +
+    "\023\001\002\000\024\004\031\005\030\007\uffe9\011\026" +
+    "\012\032\014\025\015\033\023\024\027\023\001\002\000" +
+    "\024\004\031\005\030\007\uffe3\011\026\012\032\014\025" +
+    "\015\033\023\024\027\023\001\002\000\024\004\031\005" +
+    "\030\007\uffdd\011\026\012\032\014\025\015\033\023\024" +
+    "\027\023\001\002\000\004\007\uffde\001\002\000\004\007" +
+    "\uffe4\001\002\000\004\007\uffea\001\002\000\004\007\uffe8" +
+    "\001\002\000\012\005\uffed\020\uffed\021\uffed\027\uffed\001" +
+    "\002\000\004\007\uffec\001\002\000\004\007\uffe2\001\002" +
+    "\000\004\007\uffe0\001\002\000\004\007\uffe6\001\002\000" +
+    "\004\027\046\001\002\000\004\010\047\001\002\000\010" +
+    "\025\052\026\051\030\053\001\002\000\004\007\072\001" +
+    "\002\000\006\013\064\016\065\001\002\000\006\013\057" +
+    "\016\060\001\002\000\004\016\054\001\002\000\004\030" +
+    "\055\001\002\000\004\007\ufff4\001\002\000\004\007\ufff2" +
+    "\001\002\000\004\025\062\001\002\000\004\025\061\001" +
+    "\002\000\004\007\ufff5\001\002\000\006\007\uffee\013\057" +
+    "\001\002\000\004\007\uffef\001\002\000\004\026\070\001" +
+    "\002\000\004\026\067\001\002\000\004\007\ufff3\001\002" +
+    "\000\004\007\ufff6\001\002\000\006\007\ufff0\013\064\001" +
+    "\002\000\004\007\ufff1\001\002\000\012\005\ufff7\020\ufff7" +
+    "\021\ufff7\027\ufff7\001\002\000\004\002\000\001\002\000" +
+    "\012\005\ufffb\020\ufffb\021\ufffb\027\ufffb\001\002\000\012" +
+    "\005\ufff9\020\ufff9\021\ufff9\027\ufff9\001\002\000\012\005" +
+    "\ufffe\020\ufffe\021\ufffe\027\ufffe\001\002\000\012\005\ufffd" +
+    "\020\ufffd\021\ufffd\027\ufffd\001\002" });
 
   /** Access to parse-action table. */
   public short[][] action_table() {return _action_table;}
@@ -68,18 +107,29 @@ public class Sintactico extends java_cup.runtime.lr_parser {
   /** <code>reduce_goto</code> table. */
   protected static final short[][] _reduce_table = 
     unpackFromStrings(new String[] {
-    "\000\037\000\004\002\004\001\001\000\006\003\006\004" +
-    "\007\001\001\000\002\001\001\000\002\001\001\000\004" +
-    "\004\040\001\001\000\002\001\001\000\002\001\001\000" +
-    "\002\001\001\000\002\001\001\000\004\005\014\001\001" +
-    "\000\002\001\001\000\004\006\031\001\001\000\004\007" +
-    "\022\001\001\000\002\001\001\000\002\001\001\000\002" +
+    "\000\075\000\004\002\004\001\001\000\014\003\007\004" +
+    "\011\010\012\012\006\013\010\001\001\000\002\001\001" +
+    "\000\002\001\001\000\002\001\001\000\012\004\075\010" +
+    "\076\012\073\013\074\001\001\000\002\001\001\000\002" +
     "\001\001\000\002\001\001\000\002\001\001\000\002\001" +
-    "\001\000\002\001\001\000\004\007\027\001\001\000\002" +
+    "\001\000\002\001\001\000\004\011\026\001\001\000\002" +
+    "\001\001\000\002\001\001\000\002\001\001\000\004\011" +
+    "\043\001\001\000\004\011\042\001\001\000\004\011\041" +
+    "\001\001\000\004\011\040\001\001\000\002\001\001\000" +
+    "\004\011\036\001\001\000\004\011\035\001\001\000\004" +
+    "\011\034\001\001\000\004\011\033\001\001\000\002\001" +
+    "\001\000\002\001\001\000\002\001\001\000\002\001\001" +
+    "\000\002\001\001\000\002\001\001\000\002\001\001\000" +
+    "\002\001\001\000\002\001\001\000\002\001\001\000\002" +
+    "\001\001\000\004\005\047\001\001\000\002\001\001\000" +
+    "\004\006\065\001\001\000\004\007\055\001\001\000\002" +
     "\001\001\000\002\001\001\000\002\001\001\000\002\001" +
-    "\001\000\002\001\001\000\004\006\035\001\001\000\002" +
-    "\001\001\000\002\001\001\000\002\001\001\000\002\001" +
-    "\001" });
+    "\001\000\002\001\001\000\002\001\001\000\002\001\001" +
+    "\000\004\007\062\001\001\000\002\001\001\000\002\001" +
+    "\001\000\002\001\001\000\002\001\001\000\002\001\001" +
+    "\000\004\006\070\001\001\000\002\001\001\000\002\001" +
+    "\001\000\002\001\001\000\002\001\001\000\002\001\001" +
+    "\000\002\001\001\000\002\001\001" });
 
   /** Access to <code>reduce_goto</code> table. */
   public short[][] reduce_table() {return _reduce_table;}
@@ -115,6 +165,8 @@ public class Sintactico extends java_cup.runtime.lr_parser {
 
   /** <code>error</code> Symbol index. */
   public int error_sym() {return 1;}
+
+
 
 
 
@@ -209,92 +261,485 @@ class CUP$Sintactico$actions {
           return CUP$Sintactico$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 4: // CONJUNTOS ::= conj dospuntos id flecha COMBINACIONES puntocoma 
+          case 4: // INICIO2 ::= INICIO2 EXPRESIONES 
             {
               Object RESULT =null;
 
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("INICIO2",1, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 5: // INICIO2 ::= EXPRESIONES 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("INICIO2",1, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 6: // INICIO2 ::= INICIO2 PORCENTAJES 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("INICIO2",1, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 7: // INICIO2 ::= PORCENTAJES 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("INICIO2",1, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 8: // INICIO2 ::= INICIO2 ENTRADAS 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("INICIO2",1, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 9: // INICIO2 ::= ENTRADAS 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("INICIO2",1, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 10: // CONJUNTOS ::= conj dospuntos id flecha COMBINACIONES puntocoma 
+            {
+              Object RESULT =null;
+		int iddleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-3)).left;
+		int iddright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-3)).right;
+		String idd = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-3)).value;
+		int combinacionleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).left;
+		int combinacionright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).right;
+		Object combinacion = (Object)((java_cup.runtime.Symbol) CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).value;
+		 System.out.println("");System.out.println(idd+" "+combinacion);
+                                                                                   Conjunto conjunto = new Conjunto(idd,(String)combinacion);
+                                                                                                   Main.conjuntos.add(conjunto);
+                                                                                  
               CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("CONJUNTOS",2, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-5)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
             }
           return CUP$Sintactico$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 5: // COMBINACIONES ::= letra guionondulado letra 
+          case 11: // COMBINACIONES ::= letra guionondulado letra 
             {
               Object RESULT =null;
-
+		int letra1left = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)).left;
+		int letra1right = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)).right;
+		String letra1 = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)).value;
+		int guionleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).left;
+		int guionright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).right;
+		String guion = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).value;
+		int letra2left = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).left;
+		int letra2right = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).right;
+		String letra2 = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.peek()).value;
+		 RESULT=letra1+guion+letra2; 
               CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("COMBINACIONES",3, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
             }
           return CUP$Sintactico$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 6: // COMBINACIONES ::= numero guionondulado numero 
+          case 12: // COMBINACIONES ::= numero guionondulado numero 
             {
               Object RESULT =null;
-
+		int numero1left = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)).left;
+		int numero1right = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)).right;
+		String numero1 = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)).value;
+		int guionleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).left;
+		int guionright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).right;
+		String guion = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).value;
+		int numero2left = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).left;
+		int numero2right = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).right;
+		String numero2 = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.peek()).value;
+		 RESULT=numero1+guion+numero2; 
               CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("COMBINACIONES",3, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
             }
           return CUP$Sintactico$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 7: // COMBINACIONES ::= simbolos guionondulado simbolos 
+          case 13: // COMBINACIONES ::= simbolos guionondulado simbolos 
             {
               Object RESULT =null;
-
+		int simbolo1left = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)).left;
+		int simbolo1right = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)).right;
+		String simbolo1 = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)).value;
+		int guionleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).left;
+		int guionright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).right;
+		String guion = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).value;
+		int simbolo2left = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).left;
+		int simbolo2right = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).right;
+		String simbolo2 = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.peek()).value;
+		 RESULT=simbolo1+guion+simbolo2; 
               CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("COMBINACIONES",3, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
             }
           return CUP$Sintactico$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 8: // COMBINACIONES ::= letra COMASLETRA 
+          case 14: // COMBINACIONES ::= letra COMASLETRA 
             {
               Object RESULT =null;
-
+		int letracoma1left = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).left;
+		int letracoma1right = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).right;
+		String letracoma1 = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).value;
+		int letracoma2left = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).left;
+		int letracoma2right = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).right;
+		Object letracoma2 = (Object)((java_cup.runtime.Symbol) CUP$Sintactico$stack.peek()).value;
+		 RESULT=letracoma1+letracoma2; 
               CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("COMBINACIONES",3, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
             }
           return CUP$Sintactico$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 9: // COMBINACIONES ::= numero COMASNUMERO 
+          case 15: // COMBINACIONES ::= numero COMASNUMERO 
             {
               Object RESULT =null;
-
+		int numerocoma1left = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).left;
+		int numerocoma1right = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).right;
+		String numerocoma1 = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).value;
+		int numerocoma2left = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).left;
+		int numerocoma2right = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).right;
+		Object numerocoma2 = (Object)((java_cup.runtime.Symbol) CUP$Sintactico$stack.peek()).value;
+		 RESULT=numerocoma1+numerocoma2; 
               CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("COMBINACIONES",3, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
             }
           return CUP$Sintactico$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 10: // COMASLETRA ::= coma letra 
+          case 16: // COMASLETRA ::= coma letra COMASLETRA 
             {
               Object RESULT =null;
-
-              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("COMASLETRA",4, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
-            }
-          return CUP$Sintactico$result;
-
-          /*. . . . . . . . . . . . . . . . . . . .*/
-          case 11: // COMASLETRA ::= coma letra COMASLETRA 
-            {
-              Object RESULT =null;
-
+		int comaaleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)).left;
+		int comaaright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)).right;
+		String comaa = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)).value;
+		int letracomaleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).left;
+		int letracomaright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).right;
+		String letracoma = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).value;
+		int combinacionleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).left;
+		int combinacionright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).right;
+		Object combinacion = (Object)((java_cup.runtime.Symbol) CUP$Sintactico$stack.peek()).value;
+		 RESULT=comaa+letracoma+combinacion; 
               CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("COMASLETRA",4, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
             }
           return CUP$Sintactico$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 12: // COMASNUMERO ::= coma numero 
+          case 17: // COMASLETRA ::= coma letra 
             {
               Object RESULT =null;
+		int comaaleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).left;
+		int comaaright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).right;
+		String comaa = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).value;
+		int letracomaleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).left;
+		int letracomaright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).right;
+		String letracoma = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.peek()).value;
+		 RESULT=comaa+letracoma; 
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("COMASLETRA",4, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
 
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 18: // COMASNUMERO ::= coma numero COMASNUMERO 
+            {
+              Object RESULT =null;
+		int comaaleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)).left;
+		int comaaright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)).right;
+		String comaa = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)).value;
+		int numerocomaleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).left;
+		int numerocomaright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).right;
+		String numerocoma = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).value;
+		int combinacionleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).left;
+		int combinacionright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).right;
+		Object combinacion = (Object)((java_cup.runtime.Symbol) CUP$Sintactico$stack.peek()).value;
+		 RESULT=comaa+numerocoma+combinacion; 
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("COMASNUMERO",5, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 19: // COMASNUMERO ::= coma numero 
+            {
+              Object RESULT =null;
+		int comaaleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).left;
+		int comaaright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).right;
+		String comaa = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).value;
+		int numerocomaleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).left;
+		int numerocomaright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).right;
+		String numerocoma = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.peek()).value;
+		 RESULT=comaa+numerocoma; 
               CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("COMASNUMERO",5, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
             }
           return CUP$Sintactico$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 13: // COMASNUMERO ::= coma numero COMASNUMERO 
+          case 20: // EXPRESIONES ::= id flecha COMBINACIONESEXPRESIONES puntocoma 
+            {
+              Object RESULT =null;
+		int iddleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-3)).left;
+		int iddright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-3)).right;
+		String idd = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-3)).value;
+		int expresionnleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).left;
+		int expresionnright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).right;
+		Object expresionn = (Object)((java_cup.runtime.Symbol) CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).value;
+		 System.out.println("");System.out.println(idd+expresionn);
+                                                                                       Expresion expresion = new Expresion(idd,(String)expresionn);
+                                                                                                       Main.expresiones.add(expresion);
+                                                                                      
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("EXPRESIONES",6, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-3)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 21: // COMBINACIONESEXPRESIONES ::= punto COMBINACIONESEXPRESIONES 
+            {
+              Object RESULT =null;
+		int puntooleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).left;
+		int puntooright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).right;
+		String puntoo = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).value;
+		int combinacionleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).left;
+		int combinacionright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).right;
+		Object combinacion = (Object)((java_cup.runtime.Symbol) CUP$Sintactico$stack.peek()).value;
+		 RESULT=puntoo+combinacion; 
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("COMBINACIONESEXPRESIONES",7, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 22: // COMBINACIONESEXPRESIONES ::= punto 
+            {
+              Object RESULT =null;
+		int puntooleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).left;
+		int puntooright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).right;
+		String puntoo = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.peek()).value;
+		 RESULT=puntoo; 
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("COMBINACIONESEXPRESIONES",7, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 23: // COMBINACIONESEXPRESIONES ::= llavea COMBINACIONESEXPRESIONES 
+            {
+              Object RESULT =null;
+		int llaveaaleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).left;
+		int llaveaaright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).right;
+		String llaveaa = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).value;
+		int combinacionleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).left;
+		int combinacionright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).right;
+		Object combinacion = (Object)((java_cup.runtime.Symbol) CUP$Sintactico$stack.peek()).value;
+		 RESULT=llaveaa+combinacion; 
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("COMBINACIONESEXPRESIONES",7, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 24: // COMBINACIONESEXPRESIONES ::= llavea 
+            {
+              Object RESULT =null;
+		int llaveaaleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).left;
+		int llaveaaright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).right;
+		String llaveaa = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.peek()).value;
+		 RESULT=llaveaa; 
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("COMBINACIONESEXPRESIONES",7, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 25: // COMBINACIONESEXPRESIONES ::= llavec COMBINACIONESEXPRESIONES 
+            {
+              Object RESULT =null;
+		int llaveccleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).left;
+		int llaveccright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).right;
+		String llavecc = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).value;
+		int combinacionleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).left;
+		int combinacionright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).right;
+		Object combinacion = (Object)((java_cup.runtime.Symbol) CUP$Sintactico$stack.peek()).value;
+		 RESULT=llavecc+combinacion; 
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("COMBINACIONESEXPRESIONES",7, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 26: // COMBINACIONESEXPRESIONES ::= llavec 
+            {
+              Object RESULT =null;
+		int llaveccleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).left;
+		int llaveccright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).right;
+		String llavecc = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.peek()).value;
+		 RESULT=llavecc; 
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("COMBINACIONESEXPRESIONES",7, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 27: // COMBINACIONESEXPRESIONES ::= id COMBINACIONESEXPRESIONES 
+            {
+              Object RESULT =null;
+		int iddleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).left;
+		int iddright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).right;
+		String idd = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).value;
+		int combinacionleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).left;
+		int combinacionright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).right;
+		Object combinacion = (Object)((java_cup.runtime.Symbol) CUP$Sintactico$stack.peek()).value;
+		 RESULT=idd+combinacion; 
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("COMBINACIONESEXPRESIONES",7, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 28: // COMBINACIONESEXPRESIONES ::= id 
+            {
+              Object RESULT =null;
+		int iddleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).left;
+		int iddright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).right;
+		String idd = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.peek()).value;
+		 RESULT=idd; 
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("COMBINACIONESEXPRESIONES",7, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 29: // COMBINACIONESEXPRESIONES ::= asterisco COMBINACIONESEXPRESIONES 
+            {
+              Object RESULT =null;
+		int asteriscooleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).left;
+		int asteriscooright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).right;
+		String asteriscoo = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).value;
+		int combinacionleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).left;
+		int combinacionright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).right;
+		Object combinacion = (Object)((java_cup.runtime.Symbol) CUP$Sintactico$stack.peek()).value;
+		 RESULT=asteriscoo+combinacion; 
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("COMBINACIONESEXPRESIONES",7, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 30: // COMBINACIONESEXPRESIONES ::= asterisco 
+            {
+              Object RESULT =null;
+		int asteriscooleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).left;
+		int asteriscooright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).right;
+		String asteriscoo = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.peek()).value;
+		 RESULT=asteriscoo; 
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("COMBINACIONESEXPRESIONES",7, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 31: // COMBINACIONESEXPRESIONES ::= or COMBINACIONESEXPRESIONES 
+            {
+              Object RESULT =null;
+		int orrleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).left;
+		int orrright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).right;
+		String orr = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).value;
+		int combinacionleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).left;
+		int combinacionright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).right;
+		Object combinacion = (Object)((java_cup.runtime.Symbol) CUP$Sintactico$stack.peek()).value;
+		 RESULT=orr+combinacion; 
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("COMBINACIONESEXPRESIONES",7, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 32: // COMBINACIONESEXPRESIONES ::= or 
+            {
+              Object RESULT =null;
+		int orrleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).left;
+		int orrright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).right;
+		String orr = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.peek()).value;
+		 RESULT=orr; 
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("COMBINACIONESEXPRESIONES",7, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 33: // COMBINACIONESEXPRESIONES ::= cadena COMBINACIONESEXPRESIONES 
+            {
+              Object RESULT =null;
+		int cadenaaleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).left;
+		int cadenaaright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).right;
+		String cadenaa = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).value;
+		int combinacionleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).left;
+		int combinacionright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).right;
+		Object combinacion = (Object)((java_cup.runtime.Symbol) CUP$Sintactico$stack.peek()).value;
+		 RESULT=cadenaa+combinacion; 
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("COMBINACIONESEXPRESIONES",7, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 34: // COMBINACIONESEXPRESIONES ::= cadena 
+            {
+              Object RESULT =null;
+		int cadenaaleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).left;
+		int cadenaaright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).right;
+		String cadenaa = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.peek()).value;
+		 RESULT=cadenaa; 
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("COMBINACIONESEXPRESIONES",7, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 35: // COMBINACIONESEXPRESIONES ::= mas COMBINACIONESEXPRESIONES 
+            {
+              Object RESULT =null;
+		int massleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).left;
+		int massright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).right;
+		String mass = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).value;
+		int combinacionleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).left;
+		int combinacionright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).right;
+		Object combinacion = (Object)((java_cup.runtime.Symbol) CUP$Sintactico$stack.peek()).value;
+		 RESULT=mass+combinacion+combinacion; 
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("COMBINACIONESEXPRESIONES",7, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 36: // COMBINACIONESEXPRESIONES ::= mas 
+            {
+              Object RESULT =null;
+		int massleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).left;
+		int massright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()).right;
+		String mass = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.peek()).value;
+		 RESULT=mass;  
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("COMBINACIONESEXPRESIONES",7, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 37: // PORCENTAJES ::= porcentajes 
             {
               Object RESULT =null;
 
-              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("COMASNUMERO",5, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("PORCENTAJES",8, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 38: // ENTRADAS ::= id dospuntos cadena puntocoma 
+            {
+              Object RESULT =null;
+		int iddleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-3)).left;
+		int iddright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-3)).right;
+		String idd = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-3)).value;
+		int cadenaaleft = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).left;
+		int cadenaaright = ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).right;
+		String cadenaa = (String)((java_cup.runtime.Symbol) CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-1)).value;
+		 System.out.println("");System.out.println(idd+cadenaa);
+                                                                       Expresion expresion2 = new Expresion(idd,cadenaa);
+                                                                                       Main.entradas.add(expresion2);
+                                                                      
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("ENTRADAS",9, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-3)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
             }
           return CUP$Sintactico$result;
 
