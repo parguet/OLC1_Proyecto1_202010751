@@ -35,7 +35,7 @@ a0 [label=<
   <TD>[7, 12]</TD>
   </TR><TR><TD>9</TD>
   <TD>-</TD>
-  <TD>"\n"</TD>
+  <TD>\\n</TD>
   <TD>-</TD>
   <TD>[9, 10, 11, 12]</TD>
   </TR><TR><TD>10</TD>

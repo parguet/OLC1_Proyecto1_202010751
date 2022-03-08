@@ -6,7 +6,7 @@ a0 [label=<
 <TABLE border="10" cellspacing="10" cellpadding="10" style="rounded"><TR><TD>S0</TD>
   <TD> </TD>
   <TD>[1, 2, 3, 5, 6, 8, 9, 10, 11, 12]</TD>
-  <TD>[S0 - {especiales2} - S1, S0 - r - S2, S0 - p - S3, S0 - {especiales1} - S4, S0 - x - S4, S0 - {grupo_1} - S5, S0 - \n - S6, S0 - b - S7, S0 - c - S7, S0 - fin - S8]</TD>
+  <TD>[S0 - {especiales2} - S1, S0 - r - S2, S0 - p - S3, S0 - {especiales1} - S4, S0 - x - S4, S0 - {grupo_1} - S5, S0 - \\n - S6, S0 - b - S7, S0 - c - S7, S0 - fin - S8]</TD>
   <TD>false</TD>
   </TR><TR><TD>S1</TD>
   <TD> </TD>
@@ -36,7 +36,7 @@ a0 [label=<
   </TR><TR><TD>S6</TD>
   <TD> </TD>
   <TD>[9, 10, 11, 12]</TD>
-  <TD>[S6 - \n - S6, S6 - b - S7, S6 - c - S7, S6 - fin - S8]</TD>
+  <TD>[S6 - \\n - S6, S6 - b - S7, S6 - c - S7, S6 - fin - S8]</TD>
   <TD>false</TD>
   </TR><TR><TD>S7</TD>
   <TD> </TD>

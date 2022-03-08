@@ -9,7 +9,7 @@ public class Main {
     public static ArrayList<Conjunto> conjuntos = new ArrayList<Conjunto>();
     public static ArrayList<Expresion> expresiones = new ArrayList<Expresion>();
     public static ArrayList<Expresion> entradas = new ArrayList<Expresion>();
-    public static ArrayList<String> errores = new ArrayList<String>();
+    public static ArrayList<ArrayList> errores = new ArrayList<ArrayList>();
 
     public static void main(String[] args) {
         Expresion expresion = new Expresion("n", "C");
@@ -103,18 +103,37 @@ public class Main {
                     }
 
                 }
-
-
             }
             expresiones.get(i).insertarTerminalAlArray("#");
             System.out.println(expresiones.get(i).getNombre() + " " + expresiones.get(i).getExpresion());
         }
 
-        String html = "";
-        for (int i = 0; i < errores.size(); i++) {
+        String html = "<!DOCTYPE html>\n" +
+                "<html>\n" +
+                "<head>\n" +
+                "<meta charset = «utf-8»>\n" +
+                "<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3\" crossorigin=\"anonymous\">\n"+
+                "<title>Errores</title>\n" +
+                "</head>\n" +
+                "<body>\n" +
+                "<table class=\"table table-dark table-hover\">\n" +
+                " <thead>\n" +
+                "    <tr>\n" +
+                "      <th scope=\"col\">Error</th>\n" +
+                "      <th scope=\"col\">Fila</th>\n" +
+                "      <th scope=\"col\">Columna</th>\n" +
+                "    </tr>\n" +
+                "  </thead>";
 
-            html+="";
+        for (int i = 0; i < errores.size(); i++) {
+            html+="<tr>\n" +
+                    "      <td>"+errores.get(i).get(0)+"</td>\n" +
+                    "      <td>"+errores.get(i).get(1)+"</td>\n" +
+                    "      <td>"+errores.get(i).get(2)+"</td>\n" +
+                    "    </tr>";
         }
+        html+="</table></body></html>";
+        EscribirArchivo(html,"./reportes/errores_202010751/errores.html");
 
         for (int i = 0; i < expresiones.size(); i++) {
 
@@ -127,10 +146,24 @@ public class Main {
 
 
             Tree arbol = new Tree(expresiones.get(i).getExpresionArray(), leaves, table); // CREA EL ARBOL
+
             Nodo raiz = arbol.getRoot();
+
+
 
             raiz.getNode(); // DETERMINA SI LOS NODOS SON ANULABLES, SUS PRIMEROS Y ULTIMOS
             raiz.follow();
+
+            String graphvizArbol = Tree.contenido+"}";
+            EscribirArchivo(graphvizArbol,"./reportes/arboles_202010751/Arbol"+(i+1)+".dot");
+            ProcessBuilder proceso0;
+            proceso0 = new ProcessBuilder("dot", "-Tpng", "-o","./reportes/arboles_202010751/Arbol"+(i+1)+".png","./reportes/arboles_202010751/Arbol"+(i+1)+".dot");
+            proceso0.redirectErrorStream(true);
+            try {
+                proceso0.start();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
 
             System.out.println("==============================TABLA SIGUIENTES==============================");
@@ -155,6 +188,7 @@ public class Main {
             ProcessBuilder proceso2;
             proceso2 = new ProcessBuilder("dot", "-Tpng", "-o","./reportes/transiciones_202010751/Tabla"+(i+1)+".png","./reportes/transiciones_202010751/Tabla"+(i+1)+".dot");
             proceso2.redirectErrorStream(true);
+
             try {
                 proceso2.start();
             } catch (IOException e) {
@@ -162,6 +196,17 @@ public class Main {
             }
 
 
+            System.out.println("=============================AFD=============================");
+            String automataGraphviz = tran.Automata();
+            EscribirArchivo(automataGraphviz,"./reportes/afd_202010751/Automata"+(i+1)+".dot");
+            ProcessBuilder proceso3;
+            proceso3 = new ProcessBuilder("dot", "-Tpng", "-o","./reportes/afd_202010751/Automata"+(i+1)+".png","./reportes/afd_202010751/Automata"+(i+1)+".dot");
+            proceso3.redirectErrorStream(true);
+            try {
+                proceso3.start();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
         }
 

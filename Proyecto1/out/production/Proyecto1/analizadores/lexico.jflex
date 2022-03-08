@@ -1,6 +1,7 @@
 package analizadores;
 import java_cup.runtime.Symbol;
 import com.company.*;
+import java.util.ArrayList;
 
 %%
 
@@ -55,5 +56,9 @@ caracterEspecial = ([\"][^\n\"]+[\"][\"])
 
 . {
     System.out.println("Este es un error lexico: " +yytext() + " en linea " + yyline + " y columna " + yycolumn);
-    Main.errores.add(+yytext());
+    ArrayList<String> errores = new ArrayList<String>();
+    errores.add(yytext());
+    errores.add(String.valueOf(yyline));
+        errores.add(String.valueOf(yycolumn));
+    Main.errores.add(errores);
 }

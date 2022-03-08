@@ -20,4 +20,7 @@ public class Transicion {
     public String toString(){
         return this.initialState + " - " + this.transition + " - " + this.finalState;
     }
+    public String graph(){
+        return "\n node"+this.initialState+ " -> node"+this.finalState + " [label=\""+this.transition.replace("\"","")+"\"];\n";
+    }
 }

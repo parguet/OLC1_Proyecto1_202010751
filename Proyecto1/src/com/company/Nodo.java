@@ -124,6 +124,15 @@ public class Nodo {
                 break;
         }
 
+        if(this.lexeme.equals("\"" + "\\" + "n" + "\"")){
+            this.lexeme="\\"+"\\"+"n"; }
+        if(this.lexeme.equals("\""+"\\"+"\"")){
+            this.lexeme="''"; }
+
+        String anulable = "";
+        if(this.anullable==true){ anulable="A"; }else{anulable="N";}
+
+        Tree.contenido+="Nodo"+ this.hashCode()+ "[label=\""+ this.lexeme.replace("\"","") +" \n "+this.first+" \n "+ this.last +" \n "+ anulable + " \"];\n";
         return this;
     }
 }

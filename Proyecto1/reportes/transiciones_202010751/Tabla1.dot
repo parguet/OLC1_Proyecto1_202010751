@@ -6,7 +6,7 @@ a0 [label=<
 <TABLE border="10" cellspacing="10" cellpadding="10" style="rounded"><TR><TD>S0</TD>
   <TD> </TD>
   <TD>[1, 2, 3, 4, 5, 6, 7, 8, 9]</TD>
-  <TD>[S0 - \' - S1, S0 - {conj1} - S2, S0 - c - S3, S0 - {conj2} - S2, S0 - e - S4, S0 - \ - S2, S0 - {conj4} - S2, S0 - h - S5]</TD>
+  <TD>[S0 - \' - S1, S0 - {conj1} - S2, S0 - c - S3, S0 - {conj2} - S2, S0 - e - S4, S0 - '' - S2, S0 - {conj4} - S2, S0 - h - S5]</TD>
   <TD>true</TD>
   </TR><TR><TD>S1</TD>
   <TD> </TD>

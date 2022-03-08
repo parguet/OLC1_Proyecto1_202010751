@@ -101,6 +101,29 @@ public class transitionTable {
         }
     }
 
+    public String Automata(){
+        String texto = "digraph G {\n rankdir=LR;\n label=\"AFD\"; \nnodex [style=invisible label = \"\"];\n";
+
+        for(ArrayList state : states){
+            texto += "node"+state.get(0) + " [shape=circle label=" +state.get(0) + "];\n";
+        }
+        texto+="Inicio->nodeS0;";
+
+        for(ArrayList state : states){
+            for(Object tr : (ArrayList)state.get(2)){
+                Transicion t = (Transicion) tr;
+                texto += t.graph();
+            }
+
+            if (state.get(3).equals(true)){
+                texto += "node"+state.get(0) + " [shape=doublecircle label=" +state.get(0) + "];\n";
+            }
+        }
+
+
+        return  texto +="}";
+    }
+
 
     public String graphviz(){
         StringBuilder dot = new StringBuilder();
