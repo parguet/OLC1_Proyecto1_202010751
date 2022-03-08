@@ -98,6 +98,7 @@ public class transitionTable {
             tran = tran.replace(", ]", "]");
 
             System.out.println(state.get(0) + " " + state.get(1) + " " + tran + " " + state.get(3));
+
         }
     }
 
@@ -125,7 +126,7 @@ public class transitionTable {
     }
 
 
-    public String graphviz(){
+    public String graphviz(ArrayList<ArrayList> table){
         StringBuilder dot = new StringBuilder();
         StringBuilder dot2 = new StringBuilder();
 
@@ -135,29 +136,53 @@ public class transitionTable {
         dot.append("node[shape=box, style=\"filled\", color=lightgrey];\n");
         dot.append("a0 [label=<\n" +
                 "<TABLE border=\"10\" cellspacing=\"10\" cellpadding=\"10\" style=\"rounded\">");
+        dot.append("<TR><TD> </TD>\n" );
 
+        int size = 0;
+
+        for(ArrayList item : table){
+            size++;
+            dot.append("<TD>"+item.get(1)+"</TD>\n");
+        }
+        dot.append("  </TR>\n");
 
         for(ArrayList state : states){
-            String tran = "[";
+
+            dot.append("<TR><TD>"+state.get(0)+state.get(1)+"</TD>\n");
+
+            ArrayList itemTemp = new ArrayList();
+            for(ArrayList item : table){
+                itemTemp.add(item.get(1));
+            }
+            String[] columnas = new String[itemTemp.size()];
+            int c= 0;
             for(Object tr : (ArrayList)state.get(2)){
                 Transicion t = (Transicion) tr;
-                tran += t.toString() + ", ";
+                c= 0;
+                for(Object item : itemTemp){
+                    if (t.transition.equals(item)){
+                        columnas[c] = t.finalState;
+                        break;
+                        //dot.append( "  <TD>"+t.finalState+"</TD>\n");
+                    }//dot.append( "  <TD> </TD>\n");
+                   c++;
+                }
             }
-            tran += "]";
+            for (int i=0; i<columnas.length ; i++) {
+                if (columnas[i]!=null){
+                    dot.append( "  <TD>"+columnas[i]+"</TD>\n");
+                }else{dot.append( "  <TD> </TD>\n");}
+            }
+            dot.append("</TR>\n");
 
-            tran = tran.replace(", ]", "]");
-
-            dot2.append("<TR><TD>"+state.get(0)+"</TD>\n" +
-                    "  <TD> </TD>\n" +
-                    "  <TD>"+state.get(1)+"</TD>\n" +
-                    "  <TD>"+tran+"</TD>\n" +
-                    "  <TD>"+state.get(3)+"</TD>\n" +
-                    "  </TR>");
         }
-        dot.append(dot2.toString().replace("\"",""));
+
+
         dot.append("</TABLE>>];");
         dot.append("}");
+        System.out.println( dot.toString());
         return dot.toString();
+
 
     }
 

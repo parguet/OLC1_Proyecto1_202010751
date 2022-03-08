@@ -183,7 +183,7 @@ public class Main {
             transitionTable tran = new transitionTable(raiz, table, leaves); // bug
             System.out.println("=============================TABLA TRANSICIONES=============================");
             tran.impTable();
-            graphviz = tran.graphviz();
+            graphviz = tran.graphviz(table);
             EscribirArchivo(graphviz,"./reportes/transiciones_202010751/Tabla"+(i+1)+".dot");
             ProcessBuilder proceso2;
             proceso2 = new ProcessBuilder("dot", "-Tpng", "-o","./reportes/transiciones_202010751/Tabla"+(i+1)+".png","./reportes/transiciones_202010751/Tabla"+(i+1)+".dot");

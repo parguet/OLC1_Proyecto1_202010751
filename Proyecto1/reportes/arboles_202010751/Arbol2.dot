@@ -1,232 +1,232 @@
 digraph G {
  layout=dot 
 labelloc = "t"edge [weigth=1000  color=darkgreen  arrowtail="open" arrowhead="open"]
-Nodo1987209593 -> Nodo1394563719;
-Nodo1399686191 -> Nodo2030123569;
-Nodo484289993 -> Nodo1399686191;
-Nodo484289993 -> Nodo1987209593;
-Nodo901715895 -> Nodo181182931;
-Nodo2053947913 -> Nodo195992424;
-Nodo2053947913 -> Nodo901715895;
-Nodo1180776197 -> Nodo701289507;
-Nodo1180776197 -> Nodo2053947913;
-Nodo900478873 -> Nodo1180776197;
-Nodo900478873 -> Nodo484289993;
-Nodo1252429727 -> Nodo95441105;
-Nodo1242755464 -> Nodo517343148;
-Nodo1242755464 -> Nodo1252429727;
-Nodo1626515870 -> Nodo1732467593;
-Nodo1626515870 -> Nodo1242755464;
-Nodo981497944 -> Nodo348517315;
-Nodo981497944 -> Nodo1626515870;
-Nodo1628309148 -> Nodo485266983;
-Nodo630685530 -> Nodo511171520;
-Nodo630685530 -> Nodo1628309148;
-Nodo266077300 -> Nodo630685530;
-Nodo266077300 -> Nodo981497944;
-Nodo2004477446 -> Nodo266077300;
-Nodo2004477446 -> Nodo900478873;
-Nodo1762273820 -> Nodo1224955174;
-Nodo647174102 -> Nodo509779156;
-Nodo647174102 -> Nodo637538254;
-Nodo1970914381 -> Nodo647174102;
-Nodo1265258643 -> Nodo1105522966;
-Nodo1740433563 -> Nodo1265258643;
-Nodo1740433563 -> Nodo1557922701;
-Nodo1168850509 -> Nodo589372335;
-Nodo601474912 -> Nodo1168850509;
-Nodo601474912 -> Nodo522549501;
-Nodo56648706 -> Nodo601474912;
-Nodo56648706 -> Nodo1740433563;
-Nodo674753442 -> Nodo56648706;
-Nodo674753442 -> Nodo1970914381;
-Nodo1169738499 -> Nodo674753442;
-Nodo1169738499 -> Nodo1762273820;
-Nodo1911468505 -> Nodo1169738499;
-Nodo1911468505 -> Nodo2004477446;
-Nodo1898879890 -> Nodo1911468505;
-Nodo1898879890 -> Nodo1725105390;
-Nodo589372335[label="{especiales3} 
+Nodo344281355 -> Nodo1817420736;
+Nodo2007294217 -> Nodo212661912;
+Nodo840954639 -> Nodo2007294217;
+Nodo840954639 -> Nodo344281355;
+Nodo1134758703 -> Nodo333383419;
+Nodo2024553006 -> Nodo895887807;
+Nodo2024553006 -> Nodo1134758703;
+Nodo1858582095 -> Nodo88382898;
+Nodo1858582095 -> Nodo2024553006;
+Nodo480295550 -> Nodo1858582095;
+Nodo480295550 -> Nodo840954639;
+Nodo403653508 -> Nodo1269426948;
+Nodo1788954318 -> Nodo1942708910;
+Nodo1788954318 -> Nodo403653508;
+Nodo289016880 -> Nodo365901016;
+Nodo289016880 -> Nodo1788954318;
+Nodo1975031705 -> Nodo1573799314;
+Nodo1975031705 -> Nodo289016880;
+Nodo475306391 -> Nodo1884362545;
+Nodo1097093885 -> Nodo1856601494;
+Nodo1097093885 -> Nodo475306391;
+Nodo1443486197 -> Nodo1097093885;
+Nodo1443486197 -> Nodo1975031705;
+Nodo781825178 -> Nodo1443486197;
+Nodo781825178 -> Nodo480295550;
+Nodo1300883470 -> Nodo1751738852;
+Nodo1882702701 -> Nodo325686421;
+Nodo1882702701 -> Nodo295880558;
+Nodo841460471 -> Nodo1882702701;
+Nodo2093300597 -> Nodo592954692;
+Nodo617213943 -> Nodo2093300597;
+Nodo617213943 -> Nodo724994443;
+Nodo2122125579 -> Nodo1671272037;
+Nodo138443702 -> Nodo2122125579;
+Nodo138443702 -> Nodo388354532;
+Nodo29781826 -> Nodo138443702;
+Nodo29781826 -> Nodo617213943;
+Nodo241696673 -> Nodo29781826;
+Nodo241696673 -> Nodo841460471;
+Nodo99727376 -> Nodo241696673;
+Nodo99727376 -> Nodo1300883470;
+Nodo1013117883 -> Nodo99727376;
+Nodo1013117883 -> Nodo781825178;
+Nodo250357514 -> Nodo1013117883;
+Nodo250357514 -> Nodo1070029697;
+Nodo1671272037[label="{especiales3} 
  [1] 
  [1] 
  N "];
-Nodo1168850509[label="+ 
+Nodo2122125579[label="+ 
  [1] 
  [1] 
  N "];
-Nodo522549501[label="{conj5} 
+Nodo388354532[label="{conj5} 
  [2] 
  [2] 
  N "];
-Nodo601474912[label="| 
+Nodo138443702[label="| 
  [1, 2] 
  [1, 2] 
  N "];
-Nodo1105522966[label="c 
+Nodo592954692[label="c 
  [3] 
  [3] 
  N "];
-Nodo1265258643[label="* 
+Nodo2093300597[label="* 
  [3] 
  [3] 
  A "];
-Nodo1557922701[label="{conj6} 
+Nodo724994443[label="{conj6} 
  [4] 
  [4] 
  N "];
-Nodo1740433563[label="| 
+Nodo617213943[label="| 
  [3, 4] 
  [3, 4] 
  A "];
-Nodo56648706[label="| 
+Nodo29781826[label="| 
  [1, 2, 3, 4] 
  [1, 2, 3, 4] 
  A "];
-Nodo509779156[label="x 
+Nodo325686421[label="x 
  [5] 
  [5] 
  N "];
-Nodo637538254[label="y 
+Nodo295880558[label="y 
  [6] 
  [6] 
  N "];
-Nodo647174102[label="| 
+Nodo1882702701[label="| 
  [5, 6] 
  [5, 6] 
  N "];
-Nodo1970914381[label="* 
+Nodo841460471[label="* 
  [5, 6] 
  [5, 6] 
  A "];
-Nodo674753442[label=". 
+Nodo241696673[label=". 
  [1, 2, 3, 4, 5, 6] 
  [1, 2, 3, 4, 5, 6] 
  A "];
-Nodo1224955174[label="e 
+Nodo1751738852[label="e 
  [7] 
  [7] 
  N "];
-Nodo1762273820[label="? 
+Nodo1300883470[label="? 
  [7] 
  [7] 
  A "];
-Nodo1169738499[label=". 
+Nodo99727376[label=". 
  [1, 2, 3, 4, 5, 6, 7] 
  [1, 2, 3, 4, 5, 6, 7] 
  A "];
-Nodo511171520[label="f 
+Nodo1856601494[label="f 
  [8] 
  [8] 
  N "];
-Nodo485266983[label="{especiales4} 
+Nodo1884362545[label="{especiales4} 
  [9] 
  [9] 
  N "];
-Nodo1628309148[label="? 
+Nodo475306391[label="? 
  [9] 
  [9] 
  A "];
-Nodo630685530[label=". 
+Nodo1097093885[label=". 
  [8] 
  [8, 9] 
  N "];
-Nodo348517315[label="n 
+Nodo1573799314[label="n 
  [10] 
  [10] 
  N "];
-Nodo1732467593[label="i 
+Nodo365901016[label="i 
  [11] 
  [11] 
  N "];
-Nodo517343148[label="j 
+Nodo1942708910[label="j 
  [12] 
  [12] 
  N "];
-Nodo95441105[label="{conj7} 
+Nodo1269426948[label="{conj7} 
  [13] 
  [13] 
  N "];
-Nodo1252429727[label="? 
+Nodo403653508[label="? 
  [13] 
  [13] 
  A "];
-Nodo1242755464[label=". 
+Nodo1788954318[label=". 
  [12] 
  [12, 13] 
  N "];
-Nodo1626515870[label=". 
+Nodo289016880[label=". 
  [11] 
  [12, 13] 
  N "];
-Nodo981497944[label=". 
+Nodo1975031705[label=". 
  [10] 
  [12, 13] 
  N "];
-Nodo266077300[label="| 
+Nodo1443486197[label="| 
  [8, 10] 
  [8, 9, 12, 13] 
  N "];
-Nodo701289507[label="l 
+Nodo88382898[label="l 
  [14] 
  [14] 
  N "];
-Nodo195992424[label="{especiales5} 
+Nodo895887807[label="{especiales5} 
  [15] 
  [15] 
  N "];
-Nodo181182931[label="n 
+Nodo333383419[label="n 
  [16] 
  [16] 
  N "];
-Nodo901715895[label="* 
+Nodo1134758703[label="* 
  [16] 
  [16] 
  A "];
-Nodo2053947913[label=". 
+Nodo2024553006[label=". 
  [15] 
  [15, 16] 
  N "];
-Nodo1180776197[label="| 
+Nodo1858582095[label="| 
  [14, 15] 
  [14, 15, 16] 
  N "];
-Nodo2030123569[label="{conj8} 
+Nodo212661912[label="{conj8} 
  [17] 
  [17] 
  N "];
-Nodo1399686191[label="? 
+Nodo2007294217[label="? 
  [17] 
  [17] 
  A "];
-Nodo1394563719[label="q 
+Nodo1817420736[label="q 
  [18] 
  [18] 
  N "];
-Nodo1987209593[label="+ 
+Nodo344281355[label="+ 
  [18] 
  [18] 
  N "];
-Nodo484289993[label=". 
+Nodo840954639[label=". 
  [17, 18] 
  [18] 
  N "];
-Nodo900478873[label="| 
+Nodo480295550[label="| 
  [14, 15, 17, 18] 
  [14, 15, 16, 18] 
  N "];
-Nodo2004477446[label="| 
+Nodo781825178[label="| 
  [8, 10, 14, 15, 17, 18] 
  [8, 9, 12, 13, 14, 15, 16, 18] 
  N "];
-Nodo1911468505[label="| 
+Nodo1013117883[label="| 
  [1, 2, 3, 4, 5, 6, 7, 8, 10, 14, 15, 17, 18] 
  [1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 13, 14, 15, 16, 18] 
  A "];
-Nodo1725105390[label="# 
+Nodo1070029697[label="# 
  [19] 
  [19] 
  N "];
-Nodo1898879890[label=". 
+Nodo250357514[label=". 
  [1, 2, 3, 4, 5, 6, 7, 8, 10, 14, 15, 17, 18, 19] 
  [19] 
  N "];

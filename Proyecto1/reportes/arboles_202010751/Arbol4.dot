@@ -1,152 +1,152 @@
 digraph G {
  layout=dot 
 labelloc = "t"edge [weigth=1000  color=darkgreen  arrowtail="open" arrowhead="open"]
-Nodo495815068 -> Nodo409073991;
-Nodo495815068 -> Nodo1596279489;
-Nodo1729642520 -> Nodo495815068;
-Nodo371778574 -> Nodo18127949;
-Nodo1947381228 -> Nodo371778574;
-Nodo1947381228 -> Nodo1729642520;
-Nodo1370438646 -> Nodo7781721;
-Nodo623230958 -> Nodo1152981867;
-Nodo623230958 -> Nodo1818355841;
-Nodo1497898017 -> Nodo1360658985;
-Nodo1497898017 -> Nodo1576286498;
-Nodo1043527677 -> Nodo662854926;
-Nodo1043527677 -> Nodo1497898017;
-Nodo646449309 -> Nodo1043527677;
-Nodo1514735687 -> Nodo646449309;
-Nodo1514735687 -> Nodo623230958;
-Nodo1944949228 -> Nodo1514735687;
-Nodo1944949228 -> Nodo1370438646;
-Nodo1177737394 -> Nodo1944949228;
-Nodo1177737394 -> Nodo538504201;
-Nodo838980477 -> Nodo763119136;
-Nodo2111569013 -> Nodo838980477;
-Nodo2111569013 -> Nodo1177737394;
-Nodo440676195 -> Nodo2111569013;
-Nodo440676195 -> Nodo1947381228;
-Nodo652385645 -> Nodo440676195;
-Nodo652385645 -> Nodo1767932631;
-Nodo1274733530 -> Nodo652385645;
-Nodo1274733530 -> Nodo1887367921;
-Nodo763119136[label="{especiales2} 
+Nodo1543574376 -> Nodo1906057012;
+Nodo1543574376 -> Nodo15361400;
+Nodo239532752 -> Nodo1543574376;
+Nodo1510482467 -> Nodo1274868713;
+Nodo409898571 -> Nodo1510482467;
+Nodo409898571 -> Nodo239532752;
+Nodo558331884 -> Nodo977621213;
+Nodo369790919 -> Nodo2063222683;
+Nodo369790919 -> Nodo1612232511;
+Nodo1892405337 -> Nodo855444784;
+Nodo1892405337 -> Nodo437469803;
+Nodo1066909529 -> Nodo292616682;
+Nodo1066909529 -> Nodo1892405337;
+Nodo1270801017 -> Nodo1066909529;
+Nodo1270804863 -> Nodo1270801017;
+Nodo1270804863 -> Nodo369790919;
+Nodo1238491686 -> Nodo1270804863;
+Nodo1238491686 -> Nodo558331884;
+Nodo1610153311 -> Nodo1238491686;
+Nodo1610153311 -> Nodo1676239347;
+Nodo1600147960 -> Nodo426137824;
+Nodo23874710 -> Nodo1600147960;
+Nodo23874710 -> Nodo1610153311;
+Nodo698504113 -> Nodo23874710;
+Nodo698504113 -> Nodo409898571;
+Nodo1955604716 -> Nodo698504113;
+Nodo1955604716 -> Nodo1595592646;
+Nodo1014046799 -> Nodo1955604716;
+Nodo1014046799 -> Nodo125162411;
+Nodo426137824[label="{especiales2} 
  [1] 
  [1] 
  N "];
-Nodo838980477[label="+ 
+Nodo1600147960[label="+ 
  [1] 
  [1] 
  N "];
-Nodo662854926[label="r 
+Nodo292616682[label="r 
  [2] 
  [2] 
  N "];
-Nodo1360658985[label="p 
+Nodo855444784[label="p 
  [3] 
  [3] 
  N "];
-Nodo1576286498[label="q 
+Nodo437469803[label="q 
  [4] 
  [4] 
  N "];
-Nodo1497898017[label=". 
+Nodo1892405337[label=". 
  [3] 
  [4] 
  N "];
-Nodo1043527677[label="| 
+Nodo1066909529[label="| 
  [2, 3] 
  [2, 4] 
  N "];
-Nodo646449309[label="* 
+Nodo1270801017[label="* 
  [2, 3] 
  [2, 4] 
  A "];
-Nodo1152981867[label="{especiales1} 
+Nodo2063222683[label="{especiales1} 
  [5] 
  [5] 
  N "];
-Nodo1818355841[label="x 
+Nodo1612232511[label="x 
  [6] 
  [6] 
  N "];
-Nodo623230958[label="| 
+Nodo369790919[label="| 
  [5, 6] 
  [5, 6] 
  N "];
-Nodo1514735687[label=". 
+Nodo1270804863[label=". 
  [2, 3, 5, 6] 
  [5, 6] 
  N "];
-Nodo7781721[label="r 
+Nodo977621213[label="r 
  [7] 
  [7] 
  N "];
-Nodo1370438646[label="? 
+Nodo558331884[label="? 
  [7] 
  [7] 
  A "];
-Nodo1944949228[label=". 
+Nodo1238491686[label=". 
  [2, 3, 5, 6] 
  [5, 6, 7] 
  N "];
-Nodo538504201[label="{grupo_1} 
+Nodo1676239347[label="{grupo_1} 
  [8] 
  [8] 
  N "];
-Nodo1177737394[label="| 
+Nodo1610153311[label="| 
  [2, 3, 5, 6, 8] 
  [5, 6, 7, 8] 
  N "];
-Nodo2111569013[label="| 
+Nodo23874710[label="| 
  [1, 2, 3, 5, 6, 8] 
  [1, 5, 6, 7, 8] 
  N "];
-Nodo18127949[label="\\n 
+Nodo1274868713[label="\\n 
  [9] 
  [9] 
  N "];
-Nodo371778574[label="* 
+Nodo1510482467[label="* 
  [9] 
  [9] 
  A "];
-Nodo409073991[label="b 
+Nodo1906057012[label="b 
  [10] 
  [10] 
  N "];
-Nodo1596279489[label="c 
+Nodo15361400[label="c 
  [11] 
  [11] 
  N "];
-Nodo495815068[label="| 
+Nodo1543574376[label="| 
  [10, 11] 
  [10, 11] 
  N "];
-Nodo1729642520[label="* 
+Nodo239532752[label="* 
  [10, 11] 
  [10, 11] 
  A "];
-Nodo1947381228[label=". 
+Nodo409898571[label=". 
  [9, 10, 11] 
  [9, 10, 11] 
  A "];
-Nodo440676195[label="| 
+Nodo698504113[label="| 
  [1, 2, 3, 5, 6, 8, 9, 10, 11] 
  [1, 5, 6, 7, 8, 9, 10, 11] 
  A "];
-Nodo1767932631[label="fin 
+Nodo1595592646[label="fin 
  [12] 
  [12] 
  N "];
-Nodo652385645[label=". 
+Nodo1955604716[label=". 
  [1, 2, 3, 5, 6, 8, 9, 10, 11, 12] 
  [12] 
  N "];
-Nodo1887367921[label="# 
+Nodo125162411[label="# 
  [13] 
  [13] 
  N "];
-Nodo1274733530[label=". 
+Nodo1014046799[label=". 
  [1, 2, 3, 5, 6, 8, 9, 10, 11, 12] 
  [13] 
  N "];
