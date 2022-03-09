@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.util.ArrayList;
 
 public class Interfaz extends JFrame implements ActionListener {
 
@@ -82,16 +83,26 @@ public class Interfaz extends JFrame implements ActionListener {
             InterfazArchivo interfazArchivo = new InterfazArchivo();
             interfazArchivo.setVisible(true);
 
-            String d = "\""+"\\"+"\"";
         }
         if (e.getSource()==generarEntradas){
+            Main.conjuntos = new ArrayList<>();
+            Main.errores = new ArrayList<>();
+            Main.expresiones = new ArrayList<>();
+            Main.entradas = new ArrayList<>();
+            Main.ExpresionesJuntas = new ArrayList<>();
             Main.analizar();
+            area2.append("Se generaron las entradas. \n");
+        }
+        if (e.getSource()==generarAutomatas){
+            area2.append("Se generaron los automatas. \n");
         }
         if (e.getSource()==verImagen) {
             escogerImagen = new JFileChooser();
+
             int returnVal = escogerImagen.showOpenDialog(null);
-            if (returnVal == JFileChooser.APPROVE_OPTION) {
+            if (returnVal == JFileChooser.APPROVE_OPTION){
                 area3.setText("");
+                area3.repaint();
                 File imagen = escogerImagen.getSelectedFile();
                 area3.insertIcon(new ImageIcon(String.valueOf(imagen)));
             }

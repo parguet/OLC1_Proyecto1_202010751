@@ -10,6 +10,7 @@ public class Main {
     public static ArrayList<Expresion> expresiones = new ArrayList<Expresion>();
     public static ArrayList<Expresion> entradas = new ArrayList<Expresion>();
     public static ArrayList<ArrayList> errores = new ArrayList<ArrayList>();
+    public static ArrayList<ArrayList> ExpresionesJuntas = new ArrayList<ArrayList>();
 
     public static void main(String[] args) {
         Expresion expresion = new Expresion("n", "C");
@@ -137,19 +138,12 @@ public class Main {
 
         for (int i = 0; i < expresiones.size(); i++) {
 
-            String er = "..a*|{c}{x}b";
-
+//==============================================================Metodo del Arbol====================================================================
             ArrayList<Nodo> leaves = new ArrayList();
             ArrayList<ArrayList> table = new ArrayList();
 
-            er = "." + er + "#";
-
-
             Tree arbol = new Tree(expresiones.get(i).getExpresionArray(), leaves, table); // CREA EL ARBOL
-
             Nodo raiz = arbol.getRoot();
-
-
 
             raiz.getNode(); // DETERMINA SI LOS NODOS SON ANULABLES, SUS PRIMEROS Y ULTIMOS
             raiz.follow();
@@ -165,10 +159,22 @@ public class Main {
                 e.printStackTrace();
             }
 
+//============================================================Metodo de thompson===========================================================
 
-            System.out.println("==============================TABLA SIGUIENTES==============================");
+            String graphvizThompson = Tree.contenido2+"}";
+            EscribirArchivo(graphvizThompson,"./reportes/afnd_202010751/Thompson"+(i+1)+".dot");
+            ProcessBuilder procesoo;
+            procesoo = new ProcessBuilder("dot", "-Tpng", "-o","./reportes/afnd_202010751/Thompson"+(i+1)+".png","./reportes/afnd_202010751/Thompson"+(i+1)+".dot");
+            procesoo.redirectErrorStream(true);
+            try {
+                procesoo.start();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
+            //System.out.println("==============================TABLA SIGUIENTES==============================");
             followTable ft = new followTable();
-            ft.printTable(table);
             String graphviz = ft.graphviz(table);
             EscribirArchivo(graphviz,"./reportes/siguientes_202010751/Tabla"+(i+1)+".dot");
             ProcessBuilder proceso;
@@ -180,15 +186,13 @@ public class Main {
                 e.printStackTrace();
             }
 
-            transitionTable tran = new transitionTable(raiz, table, leaves); // bug
-            System.out.println("=============================TABLA TRANSICIONES=============================");
-            tran.impTable();
+            transitionTable tran = new transitionTable(raiz, table, leaves);
+            //System.out.println("=============================TABLA TRANSICIONES=============================");
             graphviz = tran.graphviz(table);
             EscribirArchivo(graphviz,"./reportes/transiciones_202010751/Tabla"+(i+1)+".dot");
             ProcessBuilder proceso2;
             proceso2 = new ProcessBuilder("dot", "-Tpng", "-o","./reportes/transiciones_202010751/Tabla"+(i+1)+".png","./reportes/transiciones_202010751/Tabla"+(i+1)+".dot");
             proceso2.redirectErrorStream(true);
-
             try {
                 proceso2.start();
             } catch (IOException e) {
@@ -196,7 +200,7 @@ public class Main {
             }
 
 
-            System.out.println("=============================AFD=============================");
+            //System.out.println("=============================AFD=============================");
             String automataGraphviz = tran.Automata();
             EscribirArchivo(automataGraphviz,"./reportes/afd_202010751/Automata"+(i+1)+".dot");
             ProcessBuilder proceso3;
@@ -209,9 +213,6 @@ public class Main {
             }
 
         }
-
-
-
 
     }
 
@@ -230,40 +231,6 @@ public class Main {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-
-
-    public static String LeerArchivo(String ruta){
-        //aqui se leera
-        File archivo = null;
-        FileReader fr = null;
-        BufferedReader br;
-        String contenido = "";
-        try{
-            archivo = new File(ruta);
-            fr = new FileReader(archivo);
-            br = new BufferedReader(fr);
-            String linea;
-            while ((linea = br.readLine()) != null) {
-                contenido += linea;
-            }
-            return contenido;
-        } catch (Exception e1) {
-            e1.printStackTrace();
-        } finally {
-            try {
-                if (null != fr) {
-                    fr.close();
-                }
-            } catch (Exception e2) {
-                e2.printStackTrace();
-            }
-        }
-        //termina de hacer la lectura
-        return contenido;
-
-
     }
 
 }

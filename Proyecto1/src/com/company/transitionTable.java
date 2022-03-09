@@ -180,7 +180,6 @@ public class transitionTable {
 
         dot.append("</TABLE>>];");
         dot.append("}");
-        System.out.println( dot.toString());
         return dot.toString();
 
 

@@ -2,6 +2,7 @@ package analizadores;
 import java_cup.runtime.Symbol;
 import analizadores.*;
 import com.company.*;
+import java.util.ArrayList;
 
 parser code
 {:
@@ -15,7 +16,12 @@ parser code
         int fila = s.right;
         int columna = s.left;
 
-        System.out.println("!!!!!!! XDDDDD Recuperado !!!!!!!");
+         ArrayList<String> errores = new ArrayList<String>();
+            errores.add(lexema);
+            errores.add(String.valueOf(fila));
+                errores.add(String.valueOf(columna));
+            Main.errores.add(errores);
+        System.out.println("=======Recuperado========");
 
 
     }
@@ -27,7 +33,7 @@ parser code
         int fila = s.right;
         int columna = s.left;
 
-        System.out.println("!!!!!!! AAAAAAAAAAAAAAAAA, Panic Mode !!!!!!! ");
+        System.out.println("=======ErrorIrrecuperable=========");
 
     }
 :}
@@ -49,6 +55,7 @@ INICIO2::= CONJUNTOS
 | PORCENTAJES
 | INICIO2 ENTRADAS
 | ENTRADAS
+| error
 ;
 
 CONJUNTOS::= conj dospuntos id:idd flecha  COMBINACIONES:combinacion puntocoma  {: System.out.println("");System.out.println(idd+" "+combinacion);

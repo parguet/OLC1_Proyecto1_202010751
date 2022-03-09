@@ -132,7 +132,26 @@ public class Nodo {
         String anulable = "";
         if(this.anullable==true){ anulable="A"; }else{anulable="N";}
 
+
+
+
         Tree.contenido+="Nodo"+ this.hashCode()+ "[label=\""+ this.lexeme.replace("\"","") +" \n "+this.first+" \n "+ this.last +" \n "+ anulable + " \"];\n";
+
+        Tree.contenido2+="Nodo"+ this.hashCode()+ "[label=\" \"];\n";
+
+        if(this.lexeme.replace("\"","").equals("|")){
+            Tree.contenido2+="Nodo"+ this.hashCode()+ "D[label=\" \" shape=\"doublecircle\"];\n";
+            Tree.contenido2+="Nodo"+ this.left.hashCode()+ "D[label=\" \"];\n";
+            Tree.contenido2+="Nodo"+ this.right.hashCode()+ "D[label=\" \"];\n";
+
+        }else if(this.lexeme.replace("\"","").equals("*") || this.lexeme.replace("\"","").equals("+") || this.lexeme.replace("\"","").equals("?")){
+            Tree.contenido2+="Nodo"+ this.hashCode()+ "D[label=\" \" shape=\"doublecircle\"];\n";
+            Tree.contenido2+="Nodo"+ this.left.hashCode()+ "D[label=\" \"];\n";
+        }
+
+
+
+
         return this;
     }
 }
